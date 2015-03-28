@@ -1,7 +1,6 @@
 package br.com.unichristus.geometry.vector.addition;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,24 +21,23 @@ public class AdicaoVetorialActivity extends ActionBarActivity {
     int w[];
     int a, b, c, d;
 
-
     Button btAdicaoVetor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adicao_vetorial);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+        //ActionBar actionBar = getSupportActionBar();
+        //actionBar.hide();
 
-        btAdicaoVetor = (Button)findViewById(R.id.btnAdicaoDeVetores);
+        Button btAdicaoVetor;
+        btAdicaoVetor = (Button)findViewById(R.id.btnAddition);
         btAdicaoVetor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 vectorA1 = (EditText)findViewById(R.id.edtVetorA1);
                 vectorA2 = (EditText)findViewById(R.id.edtVetorA2);
-
                 vectorB1 = (EditText)findViewById(R.id.edtVetorB1);
                 vectorB2 = (EditText)findViewById(R.id.edtVetorB2);
 
@@ -51,7 +49,6 @@ public class AdicaoVetorialActivity extends ActionBarActivity {
                 adicaoVetorial(a, b, c, d);
             }
         });
-
     }
 
     private  void adicaoVetorial(int a, int b, int c, int d) {
@@ -64,7 +61,6 @@ public class AdicaoVetorialActivity extends ActionBarActivity {
         soma = r.toString();
         TextView res = (TextView)findViewById(R.id.txvResultSoma);
         res.setText("Resultado Soma: (" + r[0] + "," + r[1]+")");
-
     }
 
     @Override

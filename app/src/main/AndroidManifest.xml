@@ -28,6 +28,10 @@
             android:name=".vector.subtraction.SubtractionVectorialActivity"
             android:label="@string/title_activity_subtraction_vectorial" >
         </activity>
+        <activity
+            android:name=".vector.escalar.EscalarProductActivity"
+            android:label="@string/title_activity_escalar_product" >
+        </activity>
     </application>
 
 </manifest>

@@ -23,34 +23,34 @@
         android:text="Escolha a Operação"
         android:id="@+id/textView5"
         android:layout_below="@+id/textView4"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Adição de Vetores"
-        android:id="@+id/btnStartAdicao"
-        android:layout_marginTop="39dp"
+        android:id="@+id/btnStartAddition"
+        android:layout_marginTop="21dp"
         android:layout_below="@+id/textView5"
         android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/textView4" />
+        android:layout_toStartOf="@+id/textView4"
+        android:layout_alignEnd="@+id/btnStartEscalar" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Subtração de Vetores"
         android:id="@+id/btnStartSubtracao"
-        android:layout_alignBottom="@+id/btnStartAdicao"
+        android:layout_alignBottom="@+id/btnStartAddition"
         android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Prod. Escalar"
-        android:id="@+id/btStartEscalar"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/btnStartAdicao"
-        android:layout_alignEnd="@+id/btnStartAdicao"
+        android:id="@+id/btnStartEscalar"
+        android:layout_marginTop="9dp"
+        android:layout_below="@+id/btnStartAddition"
         android:layout_alignParentStart="true" />
 
     <Button
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content"
         android:text="Prod. Vetorial"
         android:id="@+id/btnStartProdVetorial"
-        android:layout_alignBottom="@+id/btStartEscalar"
+        android:layout_alignBottom="@+id/btnStartEscalar"
         android:layout_alignEnd="@+id/btnStartSubtracao"
         android:layout_alignStart="@+id/btnStartSubtracao" />
 
@@ -67,10 +67,9 @@
         android:layout_height="wrap_content"
         android:text="Modulo - Vetor"
         android:id="@+id/btnModVetor"
-        android:layout_marginTop="13dp"
-        android:layout_below="@+id/btStartEscalar"
+        android:layout_below="@+id/btnStartEscalar"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/btStartEscalar" />
+        android:layout_marginTop="8dp" />
 
     <Button
         android:layout_width="wrap_content"

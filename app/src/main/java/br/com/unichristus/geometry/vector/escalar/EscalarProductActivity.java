@@ -1,4 +1,4 @@
-package br.com.unichristus.geometry.vector.subtraction;
+package br.com.unichristus.geometry.vector.escalar;
 
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
@@ -12,9 +12,9 @@ import android.widget.TextView;
 
 import br.com.unichristus.geometry.R;
 
-public class SubtractionVectorialActivity extends ActionBarActivity {
+public class EscalarProductActivity extends ActionBarActivity {
 
-    private static final String CATEGORY = "subtraction_vectorial";
+    private static final String CATEGORY = "escalar";
 
     EditText vectorA1, vectorA2;
     EditText vectorB1, vectorB2;
@@ -22,51 +22,49 @@ public class SubtractionVectorialActivity extends ActionBarActivity {
     int w[];
     int a, b, c, d;
 
-    Button btSubtractionVector;
+    Button btEscalar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_subtraction_vectorial);
+        setContentView(R.layout.activity_escalar_product);
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
-
-
-        btSubtractionVector = (Button)findViewById(R.id.btnSubtractionVectorial);
-        btSubtractionVector.setOnClickListener(new View.OnClickListener() {
+        btEscalar = (Button)findViewById(R.id.btnEscalar);
+        btEscalar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                vectorA1 = (EditText)findViewById(R.id.edtVetorAv1);
-                vectorA2 = (EditText)findViewById(R.id.edtVetorAv2);
+                vectorA1 = (EditText)findViewById(R.id.edtVetorAe1);
+                vectorA2 = (EditText)findViewById(R.id.edtVetorAe2);
 
-                vectorB1 = (EditText)findViewById(R.id.edtVetorBv1);
-                vectorB2 = (EditText)findViewById(R.id.edtVetorBv2);
+                vectorB1 = (EditText)findViewById(R.id.edtVetorBe1);
+                vectorB2 = (EditText)findViewById(R.id.edtVetorBe2);
 
                 a = Integer.parseInt(vectorA1.getText().toString());
                 b = Integer.parseInt(vectorA2.getText().toString());
                 c = Integer.parseInt(vectorB1.getText().toString());
                 d = Integer.parseInt(vectorB2.getText().toString());
 
-                subtractionVectorial(a,b,c, d);
+                escalar(a, b, c, d);
 
             }
         });
 
     }
 
-    private void subtractionVectorial(int a,int b,int c, int d) {
+    private void escalar(int a, int b, int c, int d) {
 
         int v[] = {a,b};
         int w[] = {c, d};
-        int r[] = {a-c , b-d};
+        int r[] = {(a*c) + (b*d)};
 
         String soma;
         soma = r.toString();
-        TextView res = (TextView)findViewById(R.id.txvResultSubtraction);
-        res.setText("Resultado Subtração: (" + r[0] + "," + r[1]+")");
+        TextView res = (TextView)findViewById(R.id.txvEscalar);
+        res.setText("Resultado Escalar: " + r[0]);
 
     }
 
@@ -74,7 +72,7 @@ public class SubtractionVectorialActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_subtraction_vectorial, menu);
+        getMenuInflater().inflate(R.menu.menu_escalar_product, menu);
         return true;
     }
 

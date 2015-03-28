@@ -12,6 +12,7 @@ import android.widget.Button;
 
 import br.com.unichristus.geometry.R;
 import br.com.unichristus.geometry.vector.addition.AdicaoVetorialActivity;
+import br.com.unichristus.geometry.vector.escalar.EscalarProductActivity;
 import br.com.unichristus.geometry.vector.subtraction.SubtractionVectorialActivity;
 
 public class MenuActivity extends ActionBarActivity {
@@ -27,17 +28,14 @@ public class MenuActivity extends ActionBarActivity {
         actionBar.hide();
 
 
-        // ADICAO
-        btStartAdicao = (Button)findViewById(R.id.btnStartAdicao);
-        btStartAdicao.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent itAdicao = new Intent(getApplicationContext(), AdicaoVetorialActivity.class);
-                startActivity(itAdicao);
-            }
-        });
 
-        // SUBTRACAO
+
+
+
+
+
+
+        // SUBTRACAO - Subtraction
         btStartSubtracao = (Button)findViewById(R.id.btnStartSubtracao);
         btStartSubtracao.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,10 +54,28 @@ public class MenuActivity extends ActionBarActivity {
                 Uri uri = Uri.parse("http://lmgtfy.com/?q=Vetores");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
-
             }
         });
 
+        // Produto Escalar
+        btStartEscalar = (Button)findViewById(R.id.btnStartEscalar);
+        btStartEscalar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent itEscalar = new Intent(getApplicationContext(), EscalarProductActivity.class);
+                startActivity(itEscalar);
+            }
+        });
+
+        // Addition
+        btStartAdicao = (Button)findViewById(R.id.btnStartAddition);
+        btStartAdicao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent itAddition = new Intent(MenuActivity.this, AdicaoVetorialActivity.class);
+                startActivity(itAddition);
+            }
+        });
 
 
 
