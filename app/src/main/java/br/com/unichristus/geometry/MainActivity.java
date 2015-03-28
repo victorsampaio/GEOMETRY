@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import br.com.unichristus.geometry.matrix.MenuActivity;
+import br.com.unichristus.geometry.vector.MenuActivity;
 
 
 public class MainActivity extends ActionBarActivity {

@@ -17,11 +17,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".matrix.MenuActivity"
+            android:name=".vector.MenuActivity"
             android:label="@string/title_activity_matrix" >
         </activity>
         <activity
-            android:name=".matrix.adicao.AdicaoVetorialActivity"
+            android:name=".vector.adicao.AdicaoVetorialActivity"
             android:label="@string/title_activity_adicao_vetorial" >
         </activity>
     </application>

@@ -1,4 +1,4 @@
-package br.com.unichristus.geometry.matrix;
+package br.com.unichristus.geometry.vector;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 import br.com.unichristus.geometry.R;
-import br.com.unichristus.geometry.matrix.adicao.AdicaoVetorialActivity;
+import br.com.unichristus.geometry.vector.adicao.AdicaoVetorialActivity;
 
 public class MenuActivity extends ActionBarActivity {
 
