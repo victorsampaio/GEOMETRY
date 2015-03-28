@@ -5,4 +5,5 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_matrix">MatrixActivity</string>
     <string name="title_activity_adicao_vetorial">AdicaoVetorialActivity</string>
+    <string name="title_activity_subtraction_vectorial">Subtração de Vetores</string>
 </resources>

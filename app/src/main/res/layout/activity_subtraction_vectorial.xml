@@ -4,15 +4,14 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="br.com.unichristus.geometry.vector.addition.AdicaoVetorialActivity"
-    android:id="@+id/adicaoVetores">
+    tools:context="br.com.unichristus.geometry.vector.subtraction.SubtractionVectorialActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Adição de 2 Vetores"
-        android:id="@+id/textView15"
+        android:text="Subtração de Vetores"
+        android:id="@+id/textView6"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -21,8 +20,17 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Vetor 1"
-        android:id="@+id/textView16"
-        android:layout_below="@+id/textView15"
+        android:id="@+id/textView7"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor 1"
+        android:id="@+id/textView8"
+        android:layout_below="@+id/textView7"
         android:layout_alignParentStart="true" />
 
     <TextView
@@ -30,24 +38,16 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Vetor 2"
-        android:id="@+id/textView17"
-        android:layout_below="@+id/textView15"
+        android:id="@+id/textView9"
+        android:layout_alignTop="@+id/textView7"
         android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Valor 1"
-        android:id="@+id/textView18"
-        android:layout_below="@+id/textView16"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Valor1"
-        android:id="@+id/textView19"
-        android:layout_below="@+id/textView17"
+        android:id="@+id/textView10"
+        android:layout_below="@+id/textView9"
         android:layout_alignParentEnd="true" />
 
     <EditText
@@ -55,76 +55,73 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/edtVetorA1"
-        android:layout_below="@+id/textView18"
+        android:id="@+id/edtVetorAv1"
+        android:layout_below="@+id/textView8"
         android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/textView15" />
+        android:layout_toStartOf="@+id/textView6" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/edtVetorB1"
-        android:layout_alignTop="@+id/edtVetorA1"
-        android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/textView15" />
+        android:id="@+id/edtVetorBv1"
+        android:layout_alignBottom="@+id/edtVetorAv1"
+        android:layout_alignEnd="@+id/textView10"
+        android:layout_toEndOf="@+id/textView6" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Valor 2"
-        android:id="@+id/textView20"
-        android:layout_below="@+id/edtVetorA1"
+        android:id="@+id/textView11"
+        android:layout_below="@+id/edtVetorAv1"
         android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Valor2"
-        android:id="@+id/textView21"
-        android:layout_below="@+id/edtVetorB1"
-        android:layout_alignEnd="@+id/edtVetorB2" />
+        android:text="Valor 2"
+        android:id="@+id/textView12"
+        android:layout_alignTop="@+id/textView11"
+        android:layout_alignEnd="@+id/edtVetorBv1" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/edtVetorA2"
-        android:layout_below="@+id/textView20"
+        android:id="@+id/edtVetorAv2"
+        android:layout_below="@+id/textView11"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/edtVetorA1" />
+        android:layout_alignEnd="@+id/edtVetorAv1" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/edtVetorB2"
-        android:layout_alignTop="@+id/edtVetorA2"
-        android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/textView15" />
+        android:id="@+id/edtVetorBv2"
+        android:layout_alignTop="@+id/edtVetorAv2"
+        android:layout_alignStart="@+id/edtVetorBv1" />
 
     <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Adicao de Vetores"
-        android:id="@+id/btnAdicaoDeVetores"
-        android:layout_below="@+id/edtVetorA2"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="22dp"
-        android:layout_alignParentStart="true" />
+        android:text="Subtraçãode de Vetores"
+        android:id="@+id/btnSubtractionVectorial"
+        android:layout_below="@+id/edtVetorAv2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="22dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Resultado: "
-        android:id="@+id/txvResultSoma"
-        android:layout_marginTop="37dp"
-        android:layout_below="@+id/btnAdicaoDeVetores"
-        android:layout_alignParentStart="true" />
+        android:text="Resultado:"
+        android:id="@+id/txvResultSubtraction"
+        android:layout_below="@+id/btnSubtractionVectorial"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="37dp" />
 
 </RelativeLayout>

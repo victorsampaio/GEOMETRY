@@ -11,7 +11,8 @@ import android.view.View;
 import android.widget.Button;
 
 import br.com.unichristus.geometry.R;
-import br.com.unichristus.geometry.vector.adicao.AdicaoVetorialActivity;
+import br.com.unichristus.geometry.vector.addition.AdicaoVetorialActivity;
+import br.com.unichristus.geometry.vector.subtraction.SubtractionVectorialActivity;
 
 public class MenuActivity extends ActionBarActivity {
 
@@ -41,6 +42,8 @@ public class MenuActivity extends ActionBarActivity {
         btStartSubtracao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent itSubtraction = new Intent(getApplicationContext(), SubtractionVectorialActivity.class);
+                startActivity(itSubtraction);
 
             }
         });

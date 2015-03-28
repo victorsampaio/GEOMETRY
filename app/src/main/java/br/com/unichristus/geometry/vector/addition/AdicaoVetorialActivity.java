@@ -1,4 +1,4 @@
-package br.com.unichristus.geometry.vector.adicao;
+package br.com.unichristus.geometry.vector.addition;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -32,10 +32,11 @@ public class AdicaoVetorialActivity extends ActionBarActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
-        btAdicaoVetor= (Button)findViewById(R.id.btnAdicaoDeVetores);
+        btAdicaoVetor = (Button)findViewById(R.id.btnAdicaoDeVetores);
         btAdicaoVetor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 vectorA1 = (EditText)findViewById(R.id.edtVetorA1);
                 vectorA2 = (EditText)findViewById(R.id.edtVetorA2);
 
@@ -65,7 +66,6 @@ public class AdicaoVetorialActivity extends ActionBarActivity {
         res.setText("Resultado Soma: (" + r[0] + "," + r[1]+")");
 
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

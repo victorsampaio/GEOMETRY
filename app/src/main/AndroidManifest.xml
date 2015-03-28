@@ -24,6 +24,10 @@
             android:name=".vector.adicao.AdicaoVetorialActivity"
             android:label="@string/title_activity_adicao_vetorial" >
         </activity>
+        <activity
+            android:name=".vector.subtraction.SubtractionVectorialActivity"
+            android:label="@string/title_activity_subtraction_vectorial" >
+        </activity>
     </application>
 
 </manifest>
