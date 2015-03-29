@@ -36,6 +36,14 @@
             android:name=".vector.addition.AdditionVectorActivity"
             android:label="@string/title_activity_addition_vector" >
         </activity>
+        <activity
+            android:name=".vector.vectorial.VectorialProductActivity"
+            android:label="@string/title_activity_vectorial_product" >
+        </activity>
+        <activity
+            android:name=".vector.modulovector.VectorModuloActivity"
+            android:label="@string/title_activity_vector_modulo" >
+        </activity>
     </application>
 
 </manifest>
