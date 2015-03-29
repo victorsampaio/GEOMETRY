@@ -13,6 +13,7 @@ import android.widget.Button;
 import br.com.unichristus.geometry.R;
 import br.com.unichristus.geometry.vector.addition.AdditionVectorActivity;
 import br.com.unichristus.geometry.vector.escalar.EscalarProductActivity;
+import br.com.unichristus.geometry.vector.modulovector.VectorModuloActivity;
 import br.com.unichristus.geometry.vector.subtraction.SubtractionVectorialActivity;
 import br.com.unichristus.geometry.vector.vectorial.VectorialProductActivity;
 
@@ -80,6 +81,15 @@ public class MenuActivity extends ActionBarActivity {
             }
         });
 
+        // Modulo Vetor - Vector Module
+        btModVetor = (Button)findViewById(R.id.btnModVetor);
+        btModVetor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent itMedVect = new Intent(getApplicationContext(), VectorModuloActivity.class);
+                startActivity(itMedVect);
+            }
+        });
 
     }
 
