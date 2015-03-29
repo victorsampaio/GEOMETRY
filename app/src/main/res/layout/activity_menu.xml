@@ -25,33 +25,25 @@
         android:layout_below="@+id/textView4"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Adição de Vetores"
-        android:id="@+id/btnStartAddition"
-        android:layout_marginTop="21dp"
-        android:layout_below="@+id/textView5"
-        android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/textView4"
-        android:layout_alignEnd="@+id/btnStartEscalar" />
+
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Subtração de Vetores"
         android:id="@+id/btnStartSubtracao"
-        android:layout_alignBottom="@+id/btnStartAddition"
-        android:layout_alignParentEnd="true" />
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/textView5"
+        android:layout_alignEnd="@+id/imageView" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Prod. Escalar"
         android:id="@+id/btnStartEscalar"
-        android:layout_marginTop="9dp"
-        android:layout_below="@+id/btnStartAddition"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/btnStartSubtracao"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/btnModVetor" />
 
     <Button
         android:layout_width="wrap_content"
@@ -78,7 +70,7 @@
         android:id="@+id/lmgtfy"
         android:layout_alignTop="@+id/btnModVetor"
         android:layout_alignEnd="@+id/btnStartProdVetorial"
-        android:layout_alignStart="@+id/btnStartProdVetorial" />
+        android:layout_toEndOf="@+id/textView4" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -87,6 +79,15 @@
         android:layout_alignParentEnd="true"
         android:background="@drawable/vetor"
         android:layout_below="@+id/btnModVetor" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adicao Vetor"
+        android:id="@+id/btnStartAdd"
+        android:layout_above="@+id/btnStartEscalar"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/btnStartEscalar" />
 
 
 </RelativeLayout>

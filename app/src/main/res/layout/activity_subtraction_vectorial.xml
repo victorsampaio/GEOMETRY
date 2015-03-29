@@ -108,7 +108,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Subtraçãode de Vetores"
+        android:text="Subtração de Vetores"
         android:id="@+id/btnSubtractionVectorial"
         android:layout_below="@+id/edtVetorAv2"
         android:layout_alignParentStart="true"

@@ -7,4 +7,5 @@
     <string name="title_activity_adicao_vetorial">AdicaoVetorialActivity</string>
     <string name="title_activity_subtraction_vectorial">Subtração de Vetores</string>
     <string name="title_activity_escalar_product">Produto Escalar</string>
+    <string name="title_activity_addition_vector">AdditionVectorActivity</string>
 </resources>

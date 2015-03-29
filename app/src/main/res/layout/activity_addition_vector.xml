@@ -4,14 +4,13 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="br.com.unichristus.geometry.vector.addition.AdicaoVetorialActivity" >
-
+    tools:context="br.com.unichristus.geometry.vector.addition.AdditionVectorActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Adição de 2 Vetores"
+        android:text="Adicao - Vetores"
         android:id="@+id/textView15"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -28,26 +27,26 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Vetor B"
-        android:id="@+id/textView17"
-        android:layout_below="@+id/textView15"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Valor 1"
-        android:id="@+id/textView18"
+        android:id="@+id/textView17"
         android:layout_below="@+id/textView16"
         android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Valor1"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Vetor B"
+        android:id="@+id/textView18"
+        android:layout_above="@+id/textView17"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor 1"
         android:id="@+id/textView19"
-        android:layout_below="@+id/textView17"
+        android:layout_below="@+id/textView18"
         android:layout_alignParentEnd="true" />
 
     <EditText
@@ -55,8 +54,8 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/edtVetorA1"
-        android:layout_below="@+id/textView18"
+        android:id="@+id/edtVetA1"
+        android:layout_below="@+id/textView17"
         android:layout_alignParentStart="true"
         android:layout_toStartOf="@+id/textView15" />
 
@@ -65,9 +64,8 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/edtVetorB1"
-        android:layout_alignTop="@+id/edtVetorA1"
-        android:layout_alignParentEnd="true"
+        android:id="@+id/edtVetB1"
+        android:layout_alignBottom="@+id/edtVetA1"
         android:layout_toEndOf="@+id/textView15" />
 
     <TextView
@@ -75,56 +73,54 @@
         android:layout_height="wrap_content"
         android:text="Valor 2"
         android:id="@+id/textView20"
-        android:layout_below="@+id/edtVetorA1"
+        android:layout_below="@+id/edtVetA1"
         android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Valor2"
+        android:text="Valor 2"
         android:id="@+id/textView21"
-        android:layout_below="@+id/edtVetorB1"
-        android:layout_alignEnd="@+id/edtVetorB2" />
+        android:layout_alignTop="@+id/textView20"
+        android:layout_alignEnd="@+id/textView19" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/edtVetorA2"
+        android:id="@+id/edtVetAv2"
         android:layout_below="@+id/textView20"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/edtVetorA1" />
+        android:layout_alignEnd="@+id/edtVetA1" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/edtVetorB2"
-        android:layout_alignTop="@+id/edtVetorA2"
+        android:id="@+id/edtVetBv2"
+        android:layout_below="@+id/textView21"
         android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/textView15" />
+        android:layout_alignStart="@+id/edtVetB1" />
 
     <Button
-        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Adicao de Vetores"
-        android:id="@+id/btnAddition"
-        android:layout_below="@+id/edtVetorA2"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="22dp"
-        android:layout_alignParentStart="true" />
+        android:text="Adicao"
+        android:id="@+id/btnAddVet"
+        android:layout_below="@+id/edtVetAv2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_alignEnd="@+id/textView21" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Resultado: "
-        android:id="@+id/txvResultSoma"
-        android:layout_marginTop="37dp"
-        android:layout_below="@+id/btnAddition"
-        android:layout_alignParentStart="true" />
-
+        android:id="@+id/txvAdditionVet"
+        android:layout_below="@+id/btnAddVet"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="31dp" />
 </RelativeLayout>

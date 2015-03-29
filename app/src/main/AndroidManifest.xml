@@ -32,6 +32,10 @@
             android:name=".vector.escalar.EscalarProductActivity"
             android:label="@string/title_activity_escalar_product" >
         </activity>
+        <activity
+            android:name=".vector.addition.AdditionVectorActivity"
+            android:label="@string/title_activity_addition_vector" >
+        </activity>
     </application>
 
 </manifest>

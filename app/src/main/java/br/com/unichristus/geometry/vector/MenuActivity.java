@@ -11,13 +11,13 @@ import android.view.View;
 import android.widget.Button;
 
 import br.com.unichristus.geometry.R;
-import br.com.unichristus.geometry.vector.addition.AdicaoVetorialActivity;
+import br.com.unichristus.geometry.vector.addition.AdditionVectorActivity;
 import br.com.unichristus.geometry.vector.escalar.EscalarProductActivity;
 import br.com.unichristus.geometry.vector.subtraction.SubtractionVectorialActivity;
 
 public class MenuActivity extends ActionBarActivity {
 
-    Button btStartAdicao, btStartSubtracao, btStartEscalar, btStartProdVetorial, btModVetor, lmgtfy;
+    Button btStartAdd, btStartSubtracao, btStartEscalar, btStartProdVetorial, btModVetor, lmgtfy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,13 +27,14 @@ public class MenuActivity extends ActionBarActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
-
-
-
-
-
-
-
+        btStartAdd = (Button)findViewById(R.id.btnStartAdd);
+        btStartAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent itAdd = new Intent(getApplicationContext(), AdditionVectorActivity.class);
+                startActivity(itAdd);
+            }
+        }) ;
 
         // SUBTRACAO - Subtraction
         btStartSubtracao = (Button)findViewById(R.id.btnStartSubtracao);
@@ -45,6 +46,7 @@ public class MenuActivity extends ActionBarActivity {
 
             }
         });
+
 
         // Google - http://lmgtfy.com/?q=Vetores
         lmgtfy = (Button)findViewById(R.id.lmgtfy);
@@ -64,16 +66,6 @@ public class MenuActivity extends ActionBarActivity {
             public void onClick(View v) {
                 Intent itEscalar = new Intent(getApplicationContext(), EscalarProductActivity.class);
                 startActivity(itEscalar);
-            }
-        });
-
-        // Addition
-        btStartAdicao = (Button)findViewById(R.id.btnStartAddition);
-        btStartAdicao.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent itAddition = new Intent(MenuActivity.this, AdicaoVetorialActivity.class);
-                startActivity(itAddition);
             }
         });
 

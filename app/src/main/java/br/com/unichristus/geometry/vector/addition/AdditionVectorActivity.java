@@ -1,7 +1,7 @@
 package br.com.unichristus.geometry.vector.addition;
 
-import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,9 +11,9 @@ import android.widget.TextView;
 
 import br.com.unichristus.geometry.R;
 
-public class AdicaoVetorialActivity extends ActionBarActivity {
+public class AdditionVectorActivity extends ActionBarActivity {
 
-    private static final String CATEGORY = "adicao vetores";
+    private static final String CATEGORY = "subtraction_vectorial";
 
     EditText vectorA1, vectorA2;
     EditText vectorB1, vectorB2;
@@ -21,52 +21,53 @@ public class AdicaoVetorialActivity extends ActionBarActivity {
     int w[];
     int a, b, c, d;
 
-    Button btAdicaoVetor;
+    Button btAdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_adicao_vetorial);
-        //ActionBar actionBar = getSupportActionBar();
-        //actionBar.hide();
+        setContentView(R.layout.activity_addition_vector);
 
-        Button btAdicaoVetor;
-        btAdicaoVetor = (Button)findViewById(R.id.btnAddition);
-        btAdicaoVetor.setOnClickListener(new View.OnClickListener() {
+        btAdd = (Button)findViewById(R.id.btnAddVet);
+        btAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                vectorA1 = (EditText)findViewById(R.id.edtVetorA1);
-                vectorA2 = (EditText)findViewById(R.id.edtVetorA2);
-                vectorB1 = (EditText)findViewById(R.id.edtVetorB1);
-                vectorB2 = (EditText)findViewById(R.id.edtVetorB2);
+                vectorA1 = (EditText)findViewById(R.id.edtVetA1);
+                vectorA2 = (EditText)findViewById(R.id.edtVetAv2);
+
+                vectorB1 = (EditText)findViewById(R.id.edtVetB1);
+                vectorB2 = (EditText)findViewById(R.id.edtVetBv2);
 
                 a = Integer.parseInt(vectorA1.getText().toString());
                 b = Integer.parseInt(vectorA2.getText().toString());
                 c = Integer.parseInt(vectorB1.getText().toString());
                 d = Integer.parseInt(vectorB2.getText().toString());
 
-                adicaoVetorial(a, b, c, d);
+                additionVectorial(a, b, c,d);
             }
         });
+
     }
 
-    private  void adicaoVetorial(int a, int b, int c, int d) {
+    private void additionVectorial(int a, int b, int c, int d) {
 
-       int v[] = {a,b};
-       int w[] = {c, d};
-       int r[] = {a+c , b+d};
+        //int v[] = {a,b};
+        //int w[] = {c, d};
+        //int r[] = {a+c,b+d};
 
-        String soma;
-        soma = r.toString();
-        TextView res = (TextView)findViewById(R.id.txvResultSoma);
-        res.setText("Resultado Soma: (" + r[0] + "," + r[1]+")");
+        int resu1 = a+c;
+        int resu2 = b+d;
+
+        TextView res = (TextView)findViewById(R.id.txvAdditionVet);
+        res.setText("Resultado Adicao: (" + resu1 + "," + resu2+")");
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_adicao_vetorial, menu);
+        getMenuInflater().inflate(R.menu.menu_addition_vector, menu);
         return true;
     }
 
