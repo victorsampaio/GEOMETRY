@@ -14,10 +14,11 @@ import br.com.unichristus.geometry.R;
 import br.com.unichristus.geometry.vector.addition.AdditionVectorActivity;
 import br.com.unichristus.geometry.vector.escalar.EscalarProductActivity;
 import br.com.unichristus.geometry.vector.subtraction.SubtractionVectorialActivity;
+import br.com.unichristus.geometry.vector.vectorial.VectorialProductActivity;
 
 public class MenuActivity extends ActionBarActivity {
 
-    Button btStartAdd, btStartSubtracao, btStartEscalar, btStartProdVetorial, btModVetor, lmgtfy;
+    Button btStartAdd, btStartSubtracao, btStartEscalar, btStartVetorialProduct, btModVetor, lmgtfy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +70,15 @@ public class MenuActivity extends ActionBarActivity {
             }
         });
 
+        // Produto Vetorial - Vectorial Product
+        btStartVetorialProduct = (Button)findViewById(R.id.btnStartProdVetorial);
+        btStartVetorialProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent itVectorialProd = new Intent(getApplicationContext(), VectorialProductActivity.class);
+                startActivity(itVectorialProd);
+            }
+        });
 
 
     }
