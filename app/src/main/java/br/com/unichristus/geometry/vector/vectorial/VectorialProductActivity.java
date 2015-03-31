@@ -9,6 +9,8 @@ import br.com.unichristus.geometry.R;
 
 public class VectorialProductActivity extends ActionBarActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
